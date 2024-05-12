@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jane &#128526;</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="content overpass-mono-unique"></div>
+</head>
+
+<body>
+<div class="container">
+    <div class="column1">
+    
+        <!-- <button class="profile-button" onclick="showContent('main')">
+            <img src="USETHISONEITSFUNNY.jpg" alt="Profile Photo" class="profile-photo" width="500" height="500">
+        </button>
+    
+        <button class="nav-button" onclick="showContent('experience')">experience</button>
+
+        <button class="nav-button" onclick="showContent('projects')">projects</button>
+
+        <button class="nav-button" onclick="showContent('thoughts')">thoughts log</button>
+            
+        <button class="nav-button" onclick="showContent('creative')">creative</button> -->
+        <li><a href="https://github.com/immasushirolll?tab=repositories">
+            <button class="profile-button">
+                <i class="fa fa-github" style="font-size:90px;color:rgb(237, 235, 224)"></i>
+            </button>
+        </a></li>
+    </div>
+    
+    <div class="column2" id="content-column">
+        <li><a href="projects.html">
+            <button class="nav-button">projects</button>
+        </a></li>
+
+        <button class="log-button" onclick="toggleContent()" style="font-size: 14px;"><h2>project log</h2></button>
+
+        <div id="content" style="display: none;">
+            <p>Log 7 (May 10): added a Github icon (thank you W3) button link to repos for projects, populated experience page content.</p>
+            <p>Log 6 (May 9): making good progress! format is mostly done and just populating w content now. 
+                Stretch goals for potential website v2, ball and bricks game in background, light/dark mode, website stats counter.</p>
+            <p>Log 5 (May 8): note: set container display: grid to get the columns to stay locked in place, so for this that helped 
+                prevent the nav buttons from moving with the changing content. My friend just told me to change it to pages :( ugh.</p>
+            <p>Log 4 (May 7): Got the buttons working! Had to use JS.</p>
+            <p>Log 3 (May 2): Formatted navigation buttons to go to respective sections, want to add a thing where it switches
+                 to the section that's clicked on and then it shows all the content in that section as a drop down. 
+                 May need to use JS, figure out later. Also changed theme to dark.</p>        
+            <p>Log 3 (Apr 30): Formatted columns and put navigation buttons, not yet functional.</p>
+            <p>Log 2 (Apr24): Forgot to mention, picture problem is fixed basically just cropped the photo and set the number of 
+                pixels manually, now I'm trying to fix a formatting problem, 
+                keeps going out of bounds.
+            </p>
+            <p>Log 1 (Apr 23): Started making it finally! Biggest and first challenged faced is my profile pic constantly
+            distorting
+            </p>
+        </div>
+    
+        <script src="script.js"></script> <!-- Link to external JavaScript file -->
+    </div>
+</div>
+</body>
+
+</html>
