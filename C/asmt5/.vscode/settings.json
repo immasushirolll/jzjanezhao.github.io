@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "string.h": "c",
+        "movietheaterdb_actor.h": "c",
+        "movietheaterdb_movie.h": "c"
+    }
+}

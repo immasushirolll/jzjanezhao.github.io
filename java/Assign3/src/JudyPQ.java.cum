@@ -1,0 +1,207 @@
+
+public class DLPriorityQueue<T> implements PriorityQueueADT<T> {
+	private DLinkedNode<T> front; //This is a reference to the first node of the doubly linked list
+	private DLinkedNode<T> rear; //This is a reference to the last node of the doubly linked list
+	private int count; //The value of this variable is the number of data items in the priority queue
+	
+	//Creates an empty priority queue
+	public DLPriorityQueue() {
+		this.front = null;
+		this.rear = null;
+		this.count = 0;
+	}
+	
+	//Adds to the priority queue the given dataItem with its associated priority
+	@Override
+	public void add(T data, double priority) {
+		DLinkedNode<T> newNode = new DLinkedNode<T>(data,priority);
+		
+		//If priority queue is empty, updates front and rear to data
+		if (count == 0) {
+			front = rear = newNode;
+		}
+		
+		//If priority queue is not empty, updates front, rear, or neither according to the priority
+		else {
+			DLinkedNode<T> curr=front; //curr is a reference to front
+			
+			/**Loops through queue to find the correct position of newNode and inserts newNode
+			 * If the curr is not null and less than the newNode priority, the loop will go on to
+			 * compare newNode to the next node in queue
+			 * Otherwise, it will exit the for loop
+			 */
+			for (;curr!=null&&curr.getPriority() < priority;curr=curr.getNext()); 
+			
+			/**If the loop has reached the end of the loop without finding a node priority greater
+			 * than newNode's, newNode is now the rear
+			 */
+			if (curr==null) {
+				newNode.setPrev(rear);
+				rear.setNext(newNode);
+				rear = newNode;
+			}
+			
+			/**If newNode's priority is the smallest in queue, newNode is now the front
+			 * 
+			 */
+			else if (curr==front) {
+				curr.setPrev(newNode);
+				newNode.setNext(curr);
+				front=newNode;
+			}
+			
+			/**If newNode's priority is between front and rear, insert newNode in it's respective
+			 * position
+			 */
+			else {
+			DLinkedNode<T> temp=curr.getPrev();
+			temp.setNext(newNode);
+			newNode.setPrev(temp);
+			curr.setPrev(newNode);
+			newNode.setNext(curr);
+			}
+		}
+		count++;
+		
+	}
+	
+	//Removes and returns the data item in the priority queue with smallest priority (it is the data item stored in the node at the front of the list)
+	//If several items in the priority queue have the same smallest priority, only the data item at the front of the list is removed
+	//EmptyPriorityQueueException is thrown if the priority queue is empty
+	@Override
+	public T removeMin() throws EmptyPriorityQueueException {
+		DLinkedNode<T> curr=front;
+		if (count==0) {
+			throw new EmptyPriorityQueueException("Priority queue is empty.");
+		}
+		double tempPrio = curr.getPriority();
+		DLinkedNode<T> tempNode = front;
+		for (;curr!=null;curr=curr.getNext()) {
+			if (curr.getPriority() < tempPrio) {
+				tempPrio = curr.getPriority();
+				tempNode = curr;
+			}
+		}
+		
+        //If the node we want to remove is at the start of the queue
+		if (front.getPriority()==tempPrio) {
+			this.front = front.getNext();
+			this.front.setPrev(null);
+		}
+		
+		//If the node we want to remove is at the end of the queue
+		else if (rear.getPriority()==tempPrio) {
+			this.rear = rear.getPrev();
+			this.rear.setNext(null);
+		}
+		
+		//If the node we want to remove is between the start and end of queue
+		else {
+			for (curr=front;curr!=null&&curr==tempNode;curr=curr.getNext()) {
+				curr.getNext().setPrev(curr.getPrev());
+				curr.getPrev().setNext(curr.getNext());
+			}
+		}
+        count--;
+        return tempNode.getDataItem();
+		
+	}
+	
+	//Changes the priority of the given dataItem to the new value
+	@Override
+	public void updatePriority(T dataItem, double newPriority) throws InvalidElementException {
+		DLinkedNode<T> curr=front;
+		
+		/**
+		 * For loop iterates through queue until it reaches end of queue or it finds a node that is
+		 * equal to dataItem
+		 */
+		for (;curr!=null&&!dataItem.equals(curr.getDataItem());curr=curr.getNext()); 
+		
+		/**
+		 * If there is no dataItem in the queue, throws InvalidElementException
+		 */
+		if (curr == null) {
+			throw new InvalidElementException("Invalid element.");
+		}
+		
+		/**
+		 * If the node is the only node in queue
+		 */
+		else if (count==1) {
+			curr.setPriority(newPriority);
+			return;
+		}
+		
+		/**
+		 * If the node is the last in queue		
+		 */
+		else if (curr.getNext()==null) {
+			this.rear = curr.getPrev();
+			this.rear.setNext(null);
+            curr.setPriority(-1.0);
+            this.removeMin();
+            this.add(dataItem, newPriority);
+            return;
+		}
+		
+		/**
+		 * If the node is the first in queue
+		 */
+		else if (curr.getPrev()==null) {
+			this.front = curr.getNext();
+			this.front.setPrev(null);
+			this.removeMin();
+			this.add(dataItem, newPriority);
+			return;
+		}
+		/**
+		 * If the node is somewhere between the first and last nodes, removes curr, then adds it back to the queue according to
+		 * its new priority
+		 */
+		else {
+			curr.getPrev().setNext(curr.getNext());
+			curr.getNext().setPrev(curr.getPrev());
+			curr.setPriority(-1.0);
+            this.removeMin();
+			this.add(dataItem, newPriority);
+			return;
+		}
+	}
+	
+	//Returns true if the priority queue is empty and it returns false otherwise
+	@Override
+	public boolean isEmpty() {
+		if (count==0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	//Returns the number of data items in the priority queue
+	@Override
+	public int size() {
+		return count;
+	}
+	
+	//Returns a String representation of the priority queue
+	//The priority queue will store data items of the type Hexagon
+	//This method scans the list of data items from the front to the rear
+	//It will invoke the toString method from each data item in the list and it will concatenate these strings
+	public String toString() {
+		String message = "";
+		DLinkedNode<T> curr;
+		for (curr=front;curr!=null;curr=curr.getNext()) {
+			message = message + curr.getDataItem().toString();
+		}
+		return message;
+	}
+	
+	//Returns rear
+	public DLinkedNode<T> getRear(){
+		return rear;
+	}
+	
+}

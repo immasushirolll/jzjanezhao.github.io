@@ -1,0 +1,25 @@
+1.1 Instead of ls, you could use echo to view files in the current directory instead.
+    echo * will iterate recursively through all files and directories and prints all
+    their names to terminal.
+1.2 rm -i filename will prompt you before a file or directory is removed. To not be 
+    prompted, you can use rm -f filename. -f will take precedence over -i.
+1.3 rename is for renaming multiple files at once based on a characteristic, mv is for
+    moving or renaming files and directories.
+1.4 ELF stands for Executable and Linkable Format.
+1.5 ls -l test.txt with an output of 0 means it's an empty file, it's the amount of 
+    disk space taken up. du looks at how much disk space is used by a file, including
+    the information for an empty file's inode, which is why it gives 1.
+
+2.1 mkdir -p grandparent/parent/child
+2.2 mkdir "file name"
+    rmdir "file name"
+2.3 mkdir -m 500 dirname
+2.4 cd -
+2.5 dirs -v
+    cd +6
+
+3.1 chmod -v permissions filename
+3.2 chown --reference-file1 file2
+3.3 stat -c '%A %U %G' filename
+3.4 chmod 660 filename
+3.5 If omitted, command applies specified permissions to all categories by default.
