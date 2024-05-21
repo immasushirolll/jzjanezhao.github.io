@@ -1,0 +1,250 @@
+body {
+    /* margin: 155px; */
+    /* margin-top: 0;
+    margin-bottom: 50px; */
+    margin: auto;
+    padding-top: 0;
+    display: flex;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    height: 100vh;
+    background-color: rgb(101,85,96);
+    color:rgb(252,247,255);
+    font-family: "Overpass Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: none; /* Adjust padding to fit your design */
+    background: none;
+    background-color: none; /* Button background color */
+    color: rgb(164,150,155); /* Button text color */
+    border: 15px; /* Remove default button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 25px; /* Adjust font size */
+    font-style: inherit;
+    font-family: "Overpass Mono", monospace;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-button:hover {
+    transform: scale(1.1);
+  }
+
+.log-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: none; /* Adjust padding to fit your design */
+    background: none;
+    background-color: none; /* Button background color */
+    color: rgb(157,142,98); /* Button text color */
+    border: 15px; /* Remove default button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 20px; /* Adjust font size */
+    font-style: inherit;
+    font-family: "Overpass Mono", monospace;
+    margin-bottom: 10px;
+    transition: transform 0.1s ease-in-out;
+}
+  
+.log-button:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Two columns with equal width */
+    grid-gap: 20px; /* Gap between columns */
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 250px;
+    padding: 0 20px;
+}
+  
+.column1, .column2 {
+    align-items: center;
+    padding: 20px;
+    background-color: auto;
+    flex: 1;
+    list-style-type: none;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: auto;
+    gap: 20px;
+    flex-direction: row;
+    width: 100%;
+}
+  
+.content {
+    display: auto;
+}
+
+
+/* Style for the profile photo */
+.profile-photo {
+    display: flex;
+    border-radius: 50%; /* Make the photo round */
+    width: 190px; /* Set the width of the photo */
+    height: 190px; /* Set the height of the photo */
+    cursor: pointer;
+    border: 6px solid rgb(164,150,155);
+}
+
+.profile-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    font-style: inherit;
+    margin-bottom: 10px;
+    border: 15px;
+    border-radius: 50%;
+    background: 10px;
+    padding: 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.projects-button {
+    display: flex;
+    flex-direction: column;
+    gap: none;
+    padding: none; /* Adjust padding to fit your design */
+    background: none;
+    background-color: none; /* Button background color */
+    color: rgb(237, 235, 224);
+    border: none; /* Remove default button border */
+    border-radius: none; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-style: inherit;
+    font-family: "Overpass Mono", monospace;
+    font-size: 35px;
+    margin-bottom: none;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .projects-button:hover {
+    transform: scale(1.1);
+  }
+
+.project-website-photo {
+    display: flex;
+    border-radius: 10%; /* Make the photo round */
+    width: 190px; /* Set the width of the photo */
+    height: 250px; /* Set the height of the photo */
+    cursor: pointer;
+    border: 6px solid rgb(196,202,208);
+}
+
+.project-website-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    font-style: inherit;
+    margin-bottom: 10px;
+    border: 15px;
+    border-radius: auto;
+    background: 10px;
+    padding: 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-website-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.project-website-button-hover-text {
+    visibility: hidden;
+    color: rgb(135,140,143);
+}
+
+.project-website-button-hover-text::after {
+    content: "";
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    padding: 20px;
+    gap: 20px;
+}
+
+.rect-button {
+    font-size: 16px;
+    font: inherit;
+    align-items: left;
+    color: rgb(252,247,255);
+    background-color: rgb(135,140,143);
+    width: inherit;
+    justify-content: auto;
+    border: 6px solid rgb(164,150,155);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.rect-button:hover {
+    transform: translateY(-2px);
+}
+
+.rect-button:active {
+    background-color: rgb(121, 125, 128);
+    transform: translateY(0);
+}
+
+.dropdown-content {
+    display: none;
+    background-color: rgb(135,140,143);
+    width: inherit;
+    border: 6px solid rgb(164,150,155);
+    border-radius: 4px;
+    padding: 10px;
+    justify-content: auto;
+    box-sizing: border-box;
+}
+
+.show {
+    display: block;
+}
+
+a {
+    text-decoration: none; /* Remove underlining */
+    color: inherit; /* Use the default text color of the parent element */
+}
+
+h2 {
+    color: rgb(252,247,255);
+}
+
+h3 {
+    color: rgb(135,140,143);
+}
+
+p {
+    color:rgb(252,247,255);
+}
+
+h1 {
+    color:rgb(196,202,208);
+}
