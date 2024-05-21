@@ -84,6 +84,7 @@ body {
     align-items: center;
     background-color: auto;
     gap: 20px;
+    padding: 5px;
     flex-direction: row;
     width: 100%;
 }
@@ -156,9 +157,9 @@ body {
 .project-website-button {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     cursor: pointer;
-    font-style: inherit;
+    font: inherit;
     margin-bottom: 10px;
     border: 15px;
     border-radius: auto;

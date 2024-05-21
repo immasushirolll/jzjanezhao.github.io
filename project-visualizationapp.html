@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jane &#128526;</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="content overpass-mono-unique"></div>
+</head>
+
+<body>
+<div class="container">
+    <div class="column1">
+    
+        <!-- <button class="profile-button" onclick="showContent('main')">
+            <img src="USETHISONEITSFUNNY.jpg" alt="Profile Photo" class="profile-photo" width="500" height="500">
+        </button>
+    
+        <button class="nav-button" onclick="showContent('experience')">experience</button>
+
+        <button class="nav-button" onclick="showContent('projects')">projects</button>
+
+        <button class="nav-button" onclick="showContent('thoughts')">thoughts log</button>
+            
+        <button class="nav-button" onclick="showContent('creative')">creative</button> -->
+        <li><a href="https://github.com/immasushirolll/visualization-app">
+            <button class="profile-button">
+                <i class="fa fa-github" style="font-size:90px;color:rgb(252,247,255)"></i>
+            </button>
+        </a></li>
+    </div>
+    
+    <div class="column2" id="content-column">
+        <li><a href="projects.html">
+            <button class="nav-button">projects</button>
+        </a></li>
+
+        <button class="log-button" onclick="toggleContent()" style="font-size: 14px;"><h2>project log</h2></button>
+
+        <div id="content" style="display: none;">
+            <p>Project wiki is on Github.
+            </p>
+        </div>
+    
+        <script src="script.js"></script> <!-- Link to external JavaScript file -->
+    </div>
+</div>
+</body>
+
+</html>
