@@ -16,12 +16,13 @@ body {
     /* align-items: center; */
     height: 100vh;
     background-color: #041020;
-    color:rgb(252,247,255);
+    color:#fcf7ff;
     font-family: 'Pixelify Sans', sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
+
 
 .nav-button {
     display: flex;
@@ -30,7 +31,7 @@ body {
     padding: none; /* Adjust padding to fit your design */
     background: none;
     background-color: none; /* Button background color */
-    color: rgb(164,150,155); /* Button text color */
+    color: #fcf7ff; /* Button text color */
     border: 15px; /* Remove default button border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Show pointer cursor on hover */
