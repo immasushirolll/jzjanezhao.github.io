@@ -15,9 +15,9 @@ body {
     /* justify-content: space-around; */
     /* align-items: center; */
     height: 100vh;
-    background-color: rgb(101,85,96);
+    background-color: #041020;
     color:rgb(252,247,255);
-    font-family: "Overpass Mono", monospace;
+    font-family: 'Pixelify Sans', sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -36,7 +36,7 @@ body {
     cursor: pointer; /* Show pointer cursor on hover */
     font-size: 25px; /* Adjust font size */
     font-style: inherit;
-    font-family: "Overpass Mono", monospace;
+    font-family: 'Pixelify Sans', sans-serif;
     margin-bottom: 10px;
     transition: transform 0.2s ease-in-out;
   }
@@ -52,13 +52,13 @@ body {
     padding: none; /* Adjust padding to fit your design */
     background: none;
     background-color: none; /* Button background color */
-    color: rgb(157,142,98); /* Button text color */
+    color: #134fa3; /* Button text color */
     border: 15px; /* Remove default button border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Show pointer cursor on hover */
     font-size: 20px; /* Adjust font size */
     font-style: inherit;
-    font-family: "Overpass Mono", monospace;
+    font-family: 'Pixelify Sans', sans-serif;
     margin-bottom: 10px;
     transition: transform 0.1s ease-in-out;
 }
@@ -108,7 +108,7 @@ body {
     width: 190px; /* Set the width of the photo */
     height: 190px; /* Set the height of the photo */
     cursor: pointer;
-    border: 6px solid rgb(164,150,155);
+    border: 6px solid #2bafff;
 }
 
 .profile-button {
@@ -137,12 +137,12 @@ body {
     padding: none; /* Adjust padding to fit your design */
     background: none;
     background-color: none; /* Button background color */
-    color: rgb(237, 235, 224);
+    color: #2bafff;
     border: none; /* Remove default button border */
     border-radius: none; /* Rounded corners */
     cursor: pointer; /* Show pointer cursor on hover */
     font-style: inherit;
-    font-family: "Overpass Mono", monospace;
+    font-family: 'Pixelify Sans', sans-serif;
     font-size: 35px;
     margin-bottom: none;
     transition: transform 0.2s ease-in-out;
@@ -158,7 +158,7 @@ body {
     width: 190px; /* Set the width of the photo */
     height: 250px; /* Set the height of the photo */
     cursor: pointer;
-    border: 6px solid rgb(196,202,208);
+    border: 6px solid #2bafff;
 }
 
 .project-website-button {
@@ -182,7 +182,7 @@ body {
 
 .project-website-button-hover-text {
     visibility: hidden;
-    color: rgb(135,140,143);
+    color: #041020;
 }
 
 .project-website-button-hover-text::after {
@@ -202,11 +202,11 @@ body {
     font-size: 16px;
     font: inherit;
     align-items: left;
-    color: rgb(252,247,255);
-    background-color: rgb(135,140,143);
+    color: #fcf7ff;
+    background-color: #041020;
     width: inherit;
     justify-content: auto;
-    border: 6px solid rgb(164,150,155);
+    border: 6px solid #2bafff;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
@@ -217,15 +217,15 @@ body {
 }
 
 .rect-button:active {
-    background-color: rgb(121, 125, 128);
+    background-color: #041020;
     transform: translateY(0);
 }
 
 .dropdown-content {
     display: none;
-    background-color: rgb(135,140,143);
+    background-color: #041020;
     width: inherit;
-    border: 6px solid rgb(164,150,155);
+    border: 6px solid #2bafff;
     border-radius: 4px;
     padding: 10px;
     justify-content: auto;
@@ -241,18 +241,25 @@ a {
     color: inherit; /* Use the default text color of the parent element */
 }
 
-h2 {
-    color: rgb(252,247,255);
-}
-
 h3 {
-    color: rgb(135,140,143);
-}
-
-p {
-    color:rgb(252,247,255);
+    color: #041020;
 }
 
 h1 {
-    color:rgb(196,202,208);
+    color: #1c74ee;
+    font-size: 4rem;
+    z-index: 1;
+}
+
+h2 {
+    color: #2bafff;
+    font-size: 2.5rem;
+}
+
+p {
+    color: #134fa3;
+}
+
+label {
+    color: #134fa3;
 }
