@@ -46,6 +46,17 @@ body {
     transform: scale(1.1);
   }
 
+.profile-pic {
+    width: 210px;
+    height: 160px;
+    border-radius: 0%;
+    object-fit: contain;
+    margin-top: 0rem;
+    position: absolute;
+    top: 130px;
+    z-index: 1;
+}
+
 .log-button {
     display: flex;
     flex-direction: column;
