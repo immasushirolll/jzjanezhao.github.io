@@ -13,7 +13,7 @@ body, html {
 }
 
 .split-layout {
-    display: static;
+    display: flex;
     height: 100vh;
     overflow: hidden;
 }
