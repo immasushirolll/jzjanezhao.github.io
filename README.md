@@ -1,1 +1,1 @@
-So glad you made it here! Please come find more about me by going to https://immasushirolll.github.io/jzjanezhao.github.io/templates/main.html ! (This is temporary, https://immasushirolll.github.io/jzjanezhao.github.io/main.html needs fixing.)
+So glad you made it here! Please come find more about me by going to https://immasushirolll.github.io/jzjanezhao.github.io/main.html !
