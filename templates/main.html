@@ -10,95 +10,74 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
-<!-- 
-<body>
-<div class="container">
-    <div class="column1">
-        
-        <li><a href="main.html">
-            <button class="profile-button" onclick="showContent('main')">
-                <img src="../static/imgs/cat_pic.jpg" alt="Profile picture" class="profile-pic">
-            </button>
-        </a></li>
-    
-        <li><a href="experience.html">
-            <button class="nav-button" onclick="showContent('experience')">experience</button>
-        </a></li>
-    
-        <li><a href="projects.html">
-            <button class="nav-button" onclick="showContent('projects')">projects</button>
-        </a></li>
-    
-        <li><a href="thoughts.html">
-            <button class="nav-button" onclick="showContent('thoughts')">thoughts log</button>
-        </a></li>
-        
-        <li><a href="creative.html">
-            <button class="nav-button" onclick="showContent('creative')">creative</button>
-        </a></li>
-
-    </div>
-
-    <div class="column2" id="content-column">
+<div class="split-layout"> 
+    <div class="left-panel">
+        <img src="{{ url_for('static', filename='images/profile_icon.png') }}" alt="Profile picture" class="profile-pic">
         <h1>Hi! How's it going?</h1>
-        <h3>you're a real one for being here &#128526;</h3>
+        <p>Not A Web Dev | Developer | Runner</p>
+        <div class="social-links">
+            <a href="https://github.com/immasushirolll" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/jane-zhao-8914801b5" target="_blank">LinkedIn</a>
+            <a href="https://linkedin.com/in/jane-zhao-8914801b5" target="_blank">Strava</a>
+        </div>
     </div>
 
-</div>
-
-<script src="script.js"></script>
-
-</body> -->
-<body>
-
-    <div class="container">
-
-        <!-- LEFT SIDE -->
-        <div class="left-section">
-            <img src="../static/imgs/pfp.jpg" alt="Profile picture" class="profile-pic">
-
-            <h1 class="main-title">Hi! How’s it going?</h1>
-
-            <p class="subtitle">Not A Web Dev | Developer | Runner</p>
-
-            <div class="links">
-                <a href="#">GitHub</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Strava</a>
-            </div>
-        </div>
-
-
-        <!-- RIGHT SIDE -->
-        <div class="right-section">
-
-            <section class="about">
+    <div class="right-panel">
+        <div class="content">
+            <section class="abt-me">
                 <h2>About Me</h2>
-                <p class="small-text">Short bio here...</p>
-                <p>
-                    I'm Jane, don't think we've met, but let me share some stuff
-                    about me since I assume that's what you're here to know.
-                </p>
+                <p>Short bio here...</p>
+                <p>I'm Jane, don't think we've met, but let me share some stuff about me since I assume that's what you're here to know.</p>
             </section>
-
-            <section class="projects">
+            <section class="prj">
                 <h2>Projects</h2>
-                <p class="small-text">
-                    Random stuff I've picked up and may or may not have finished...
-                </p>
+                <p>Random stuff I've picked up and may or may not have finished...</p>
                 <p>
-                    Let’s start with the obvious: this website. Designed and drawn
-                    by yours truly, built with Flask and Jinja2. This is actually
-                    personal website 2.0 already, the first one was a simple
-                    HTML/CSS/JS site that I built in 2023. I think I’ve grown
-                    more as a developer and person, and my perspectives on
-                    careers has changed so much.
+                    Let's start with the obvious; this website. Designed and drawn by yours truly, built with HTML/CSS/JS, I did have a Flask/Jinja version but I realized I can't host that on GH pages which kind of sucks.
+                    This is actually personal website 2.0 already, the first one was a simpler HTML/CSS/JS site that I built in 2023, it's technically the same repo.
+                    I think I've grown more as a developer and person, and my perspectives on careers has changed so much, 
+                    and had the opportunity to enrich myself with so many fresh ideas that the previous site no longer reflected my personality.
                 </p>
             </section>
-
+            <section class="exps">
+                <h2>Experiences</h2>
+                <p>Some jobs I've done here and there...</p>
+                <p>
+                    Data Engineer– Suncor	2024 – 2025
+                    Suncor Energy Centre, Calgary, AB
+                    •	Build end-to-end ETL pipelines to ingest data from a data source to the Azure Data Lake using Databricks and Azure Data Factory (ADF), and combining it with AzureSQL historical data in an innovative way to provide a robust data solution to reduce project costs by 4 million and saving 5 years of time.
+                    •	Map table views according to a star schema in the data warehouse in Azure Synapse as well as Snowflake to assist in Financial Project Controls reporting for internal users.
+                    •	Assist with developing process automations to assist in personal and team daily workflows. 
+                    •	Perform data validation and consistent unit testing to ensure the robustness of the data pipeline to reduce maintenance requirements in production, as well as providing appropriate documentation.                 
+                    •	Contribute to development of an in-house Automated Code Review Engine (ACRE) to streamline code review processes, reducing review time by half, for internal project teams connecting into the Enterprise Data environments. 
+                    •	Utilize Excel and PowerBI for exploratory analysis and reporting.
+                </p>
+                <p>
+                    International and Exchange Student Centre Assistant – Western International	2023 – 2024
+                    Western University, London, ON
+                    •	Collaborated with English Conversation Program Coordinator to deliver meaningful learning experiences for more than 200 international participants and 30 student volunteers at Western University by hosting more events, effecting training, and exemplary program coordination, producing outstanding reviews from all members of the program.
+                    •	Delegated responsibilities, track progress, and perform follow-up, liaising efficiently between assistants, facilitators, participants, and the Coordinator to manage multiple tasks and deliver swift results held in high regard.
+                    •	Determined an appropriate budget and cost estimates for events, and perform risk assessment, to host double the amount of events in a safe and inclusive manner with a max capacity turnout at each, ensuring the meaningful use of budget.
+                    •	Performed qualitative and quantitative term-end program evaluations, exploring insights gained from community members, refining new practices, and critically determining the effects of the program to make recommendations and improve the initiative.
+                    •	Utilized Excel and PowerBI for EDA and data visualization, contributing to program performance reports to senior executives and more than doubling the program budget.
+                    •	Assessed participant and facilitator survey feedback to implement improved systems and supports for members of the program, as well as managing and utilizing Excel sheets to organize confidential information on program members.
+                    •	Managed program’s online learning management system shell, regularly updating facilitator information and resources to keep accurate record of the professional development of facilitators.
+                </p>
+            </section>
+            <section class="contact">
+                <h2>Contact</h2>
+                <p>Contact details or link to form...</p>
+                <p>Drop your site improvement recs here! Always looking to learn.</p>
+                <p font-size=6px>(in case ur wondering, im dumping the comments in a notion database, it's public here)</p>
+                <form action="/feedback.php">
+                    <label for="feedback">Thoughts go here =>:</label>
+                    <input type="text" id="feedback" name="feedback"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
         </div>
-
     </div>
+</div>
 
 </body>
 
